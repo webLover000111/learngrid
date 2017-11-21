@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    body{
+    margin: 0 0;
+    padding: 0 0;
+    }
+    #grid{
+        height: 100vh;
+        display:grid;
+        grid-template-areas:
+         "nav nav nav"
+         "left main main"
+         "footer footer footer";
+         grid-template-columns: 300px 1fr 1fr;
+         grid-auto-rows: 60px auto 100px;
+    }
+    .nav{
+        grid-row: nav/nav;
+        grid-column: nav/nav;
+        background: black;
+
+    }
+    .leftside{
+        grid-row:left/left;
+        grid-column: left/left;
+        background:green;
+    }
+    .content{
+       display: grid;
+       grid-area: main;
+      /* grid-row:main/main;
+       grid-column:main/main;*/
+       grid-template-areas:
+       "m_left m_content";
+       grid-template-columns:1fr 1fr;
+    }
+    .m_left{
+        grid-row: m_left/m_left;
+        grid-column: m_left/m_left;
+        background: red;
+    }
+    .m_content{
+        grid-row: m_content/m_content;
+        grid-column: m_content/m_content;
+        background:yellow;
+    }
+    .footer{
+        grid-row:footer/footer;
+        grid-column:footer/footer;
+        background: blue;
+    }
+
+</style>
+<body>
+<div id="grid">
+    <div class="nav"></div>
+    <div class="leftside"></div>
+    <div class="content">
+        <div class="m_left"></div>
+        <div class="m_content"></div>
+    </div>
+    <div class="footer"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    body{
+    margin: 0 0;
+    padding: 0 0;
+    }
+    #grid{
+        height: 100vh;
+        display:grid;
+        grid-template-columns: 1fr 900px 1fr;
+
+    }
+    .leftside{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        background:green;
+    }
+    .content{
+        grid-column-start: 2;
+        grid-column-end: 3;
+
+        background:red;
+    }
+    .rightside{
+    grid-column-start:3;
+    grid-column-end:4;
+    background: green;
+    }
+</style>
+<body>
+<div id="grid">
+    <div class="leftside">11111111111</div>
+    <div class="content">2222222222</div>
+    <div class="rightside">11111111111</div>
+</div>
+</body>
+</html>
